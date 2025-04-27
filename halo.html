@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Ganti Warna Latar</title>
+</head>
+<body style="text-align: center; padding-top: 50px;">
+
+    <h1>Halo!</h1>
+    <p>Klik tombol untuk mengganti warna latar!</p>
+
+    <button onclick="gantiWarna()">Ganti Warna#2b43ff</button>
+
+    <script>
+        function gantiWarna() {
+            // Buat daftar warna
+            const warna = ["lightblue", "lightgreen", "lightpink", "lightyellow", "lightcoral"];
+            // Ambil warna random dari daftar
+            const randomWarna = warna[Math.floor(Math.random() * warna.length)];
+            // Ubah warna latar halaman
+            document.body.style.backgroundColor = randomWarna;
+        }
+    </script>
+
+</body>
+</html>
