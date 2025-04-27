@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UviPlay - Tampilkan Foto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
 
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    #foto-container {
+      display: flex;
+      gap: 20px;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="tampilkanFoto()">Tampilkan Foto</button>
+
+  <div id="foto-container">
+    <img src="https://via.placeholder.com/200x150?text=Foto+1" alt="Foto 1">
+    <img src="https://via.placeholder.com/200x150?text=Foto+2" alt="Foto 2">
+  </div>
+
+  <script>
+    function tampilkanFoto() {
+      const container = document.getElementById('foto-container');
+      container.style.opacity = 1;
+    }
+  </script>
+
+</body>
+</html>
